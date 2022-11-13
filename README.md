@@ -1,0 +1,1 @@
+# useStubs - create template files, reuse them easily.
