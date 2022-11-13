@@ -2,17 +2,26 @@
     "name": "usestubs",
     "version": "1.0.0",
     "description": "",
-    "main": "src/cli.ts",
+    "main": "dist/usestubs.ts",
+    "type": "module",
+    "bin": {
+        "usestubs": "dist/usestubs.js"
+    },
     "scripts": {
-        "dev": "tsup src/cli.ts --watch --onSuccess \"node dist/cli.js\"",
-        "start": "node dist/cli.js",
-        "build": "tsup src/cli.ts --minify"
+        "dev": "tsup src/usestubs.ts --watch --onSuccess \"node dist/usestubs.js\"",
+        "start": "node dist/usestubs.js",
+        "build": "tsup src/usestubs.ts --minify"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/node": "^18.11.9",
         "tsup": "^6.4.0",
         "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "arg": "^5.0.2",
+        "chalk": "^5.1.2"
     }
 }
